@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans&display=swap');
+
+:root {
+    --background: #0F1F3D;
+    --text-color: #F9FAFB;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+
+    background-color: var(--background);
+    color: var(--text-color);
+    margin: 160px auto 80px auto;
+    width: 800px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 48px;
+}
+
+
+h1 {
+    font-size: 20px;
+    max-width: 400px;
+}
+
+text {
+    fill: var(--text-color);
+    text-anchor: end;
+}
+
+text.year {
+    font-size: 14px;
+}
+
+text.temp {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 500;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    font-size: 10px;
+    opacity: 0;
+}
+
+circle {
+    fill: var(--text-color);
+    opacity: 0;
+}
+
+path {
+    stroke: var(--text-color);
+    stroke-width: 1px;
+    fill: none;
+    opacity: 1;
+}
+
+g.data-point:hover path {
+    opacity: 0;
+}
+
+g.data-point:hover text.temp {
+    fill: var(--background);
+    opacity: 1;
+}
+
+g.data-point:hover circle {
+    opacity: 1;
+}
